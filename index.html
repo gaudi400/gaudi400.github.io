@@ -28,18 +28,7 @@
     --display: "Fraunces", Georgia, "Times New Roman", serif;
     --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #10141d; --surface: #181e2a; --ink: #ecebe6; --ink-soft: #b7bcc8; --ink-faint: #8a90a0;
-      --rule: #273042; --hero: #0b1020; --hero-2: #1a2342; --hero-ink: #f6f1e7; --hero-soft: #aab1c6;
-      --coral: #f08a6c; --coral-soft: #3a2420; --teal: #5cc2b6; --teal-soft: #17302d; --gold: #f0c065;
-    }
-  }
-  :root[data-theme="dark"] {
-    --bg: #10141d; --surface: #181e2a; --ink: #ecebe6; --ink-soft: #b7bcc8; --ink-faint: #8a90a0;
-    --rule: #273042; --hero: #0b1020; --hero-2: #1a2342; --hero-ink: #f6f1e7; --hero-soft: #aab1c6;
-    --coral: #f08a6c; --coral-soft: #3a2420; --teal: #5cc2b6; --teal-soft: #17302d; --gold: #f0c065;
-  }
+  :root { color-scheme: light; }
 
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; scroll-padding-top: 72px; }
@@ -84,6 +73,8 @@
   .hero .role { color: var(--hero-soft); margin: 0 0 22px; }
   .hero .bio { font-size: 1.12rem; line-height: 1.7; margin: 0 0 24px; max-width: 62ch; color: var(--hero-ink); }
   .hero .bio mark { background: none; color: var(--gold); font-weight: 600; }
+  .hero .bio.service-line { margin-top: -10px; }
+  .hero .bio em { font-family: var(--display); }
   .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 28px; padding: 0; list-style: none; }
   .tags li { border: 1px solid rgba(255,255,255,.22); color: var(--hero-ink); font-size: .82rem; font-weight: 500; padding: 5px 12px; border-radius: 999px; background: rgba(255,255,255,.04); }
   .btns { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -252,12 +243,10 @@
         <li><a href="#grants">Grants</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#honors">Honors</a></li>
-        <li><a href="#service">Service</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <div class="top-actions">
-      <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode">◐</button>
       <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
     </div>
   </div>
@@ -278,6 +267,10 @@
           <mark>transition to adulthood</mark> — from adverse childhood experiences and family dynamics to
           college pathways, sleep, and mental health — in the United States, Taiwan, and other Asian societies.
         </p>
+        <p class="bio service-line">
+          I also serve as <mark>Assistant Editor</mark> of <em>Emerging Adulthood</em> and
+          <mark>Consulting Editor</mark> of the <em>Journal of Research on Adolescence</em>.
+        </p>
         <ul class="tags">
           <li>Social Inequality</li>
           <li>Sociology of Education</li>
@@ -286,10 +279,7 @@
           <li>Family &amp; Youth in the U.S.</li>
         </ul>
         <div class="btns">
-          <a class="btn primary" href="cv.pdf" target="_blank" rel="noopener">↓ Download CV</a>
-          <a class="btn" href="https://scholar.google.com/citations?user=FAvSQ2sAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
-          <a class="btn" href="https://orcid.org/0000-0002-6203-6098" target="_blank" rel="noopener">ORCID</a>
-          <a class="btn" href="mailto:chenw@mail.nsysu.edu.tw">✉ Email</a>
+          <a class="btn primary" href="mailto:chenw@mail.nsysu.edu.tw">✉ Email</a>
         </div>
       </div>
     </div>
@@ -297,7 +287,7 @@
       <div class="stat"><b id="statPubs">26</b><span>Publications</span></div>
       <div class="stat"><b id="statSSCI">23</b><span>SSCI / SCIE articles</span></div>
       <div class="stat"><b>6</b><span>NSTC / MOST grants</span></div>
-      <div class="stat"><b>3</b><span>Editorial roles</span></div>
+      <div class="stat"><b>2</b><span>Editorial roles</span></div>
     </div>
   </div>
 </section>
@@ -430,41 +420,9 @@
     </div>
   </section>
 
-  <!-- ===== Service ===== -->
-  <section class="block" id="service">
-    <div class="sec-h"><div class="num">06</div><h2>Service</h2><p>Editorial &amp; professional</p></div>
-    <div>
-      <p class="group-h">Editorial</p>
-      <div class="editor-cards reveal">
-        <div class="editor"><span class="when">2026 – PRESENT</span><b>Assistant Editor</b><span><em>Emerging Adulthood</em></span></div>
-        <div class="editor"><span class="when">2025 – PRESENT</span><b>Consulting Editor</b><span><em>Journal of Research on Adolescence</em></span></div>
-        <div class="editor"><span class="when">2026 – 2027</span><b>Review Team, LSR Pathway</b><span>Society for Research in Child Development</span></div>
-      </div>
-      <p class="group-h">Ad-hoc reviewer</p>
-      <ul class="pills journals reveal">
-        <li>Social Science Research</li>
-        <li>Population Research and Policy Review</li>
-        <li>Journal of Youth and Adolescence</li>
-        <li>Journal of Diversity in Higher Education</li>
-        <li>Adolescent Research Review</li>
-        <li>Journal of Migration and Health</li>
-        <li>Journal of Homosexuality</li>
-      </ul>
-      <p class="group-h">Memberships</p>
-      <ul class="pills reveal">
-        <li>International Sociological Association</li>
-        <li>Taiwan Population Association</li>
-        <li>Society for Research in Child Development</li>
-        <li>Society for Research on Adolescence</li>
-        <li>Society for the Study of Emerging Adulthood</li>
-        <li>American Educational Research Association</li>
-      </ul>
-    </div>
-  </section>
-
   <!-- ===== Contact ===== -->
   <section class="block" id="contact" style="border-bottom:none">
-    <div class="sec-h"><div class="num">07</div><h2>Contact</h2></div>
+    <div class="sec-h"><div class="num">06</div><h2>Contact</h2></div>
     <div class="contact reveal">
       <div>
         <h3>Get in touch</h3>
@@ -560,15 +518,6 @@ document.getElementById("pubSearch").addEventListener("input", e => { query = e.
 document.getElementById("statPubs").textContent = PUBS.length;
 document.getElementById("statSSCI").textContent = PUBS.filter(p => /SSCI|SCIE/.test(p.idx || "")).length;
 render();
-
-/* ---------- Theme toggle ---------- */
-const root = document.documentElement;
-try { const t = localStorage.getItem("theme"); if (t) root.dataset.theme = t; } catch (e) {}
-document.getElementById("themeBtn").addEventListener("click", () => {
-  const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
-  root.dataset.theme = dark ? "light" : "dark";
-  try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
-});
 
 /* ---------- Mobile menu ---------- */
 const nav = document.getElementById("nav"), menuBtn = document.getElementById("menuBtn");
